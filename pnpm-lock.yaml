@@ -11,6 +11,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.35.1
   '@typescript-eslint/parser': 5.35.1
   contentlayer: ^0.3.0
+  esbuild: ^0.17.10
   eslint: 8.23.0
   eslint-config-eason: 0.0.12
   eslint-config-next: 13.1.6
@@ -34,10 +35,10 @@ dependencies:
   '@next/font': 13.1.6
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
-  contentlayer: 0.3.0
+  contentlayer: 0.3.0_esbuild@0.17.10
   eslint-config-next: 13.1.6_yqf6kl63nyoq5megxukfnom5rm
   next: 13.1.6_rlaikcoslzwwtqyk7brpdzej5y
-  next-contentlayer: 0.3.0_3vryta7zmbcsw4rrqf4axjqggm
+  next-contentlayer: 0.3.0_zay66rtgxsux5atzkswwggtrgu
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -48,6 +49,7 @@ devDependencies:
   '@types/node': 18.7.13
   '@typescript-eslint/eslint-plugin': 5.35.1_pfwtupu3r4wxmgbx6hj7gwmyuu
   '@typescript-eslint/parser': 5.35.1_yqf6kl63nyoq5megxukfnom5rm
+  esbuild: 0.17.10
   eslint: 8.23.0
   eslint-config-eason: 0.0.12_kmnud3grqtm7mleatoj3lvi3ra
   eslint-config-prettier: 8.5.0_eslint@8.23.0
@@ -354,32 +356,35 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
 
-  /@contentlayer/cli/0.3.0:
+  /@contentlayer/cli/0.3.0_esbuild@0.17.10:
     resolution: {integrity: sha512-Mqb6NlIKINt2qsPKft+o8m5tJhJXVgVSd0zP1BH+CQRmvR/zwTT3maz1bDCPHBYGKgGCQKtvgM66IjvH+dmC6Q==}
     dependencies:
-      '@contentlayer/core': 0.3.0
+      '@contentlayer/core': 0.3.0_esbuild@0.17.10
       '@contentlayer/utils': 0.3.0
       clipanion: 3.2.0
       typanion: 3.12.1
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
+      - esbuild
       - markdown-wasm
       - supports-color
     dev: false
 
-  /@contentlayer/client/0.3.0:
+  /@contentlayer/client/0.3.0_esbuild@0.17.10:
     resolution: {integrity: sha512-yzDYiZtqOJwWrsykieA1LMnhKbaYcJhAy7s8Xs7zU5wFfyBTO258gvmK5dVi4LuzmOOPVMJn6FpEofT/RAKVtg==}
     dependencies:
-      '@contentlayer/core': 0.3.0
+      '@contentlayer/core': 0.3.0_esbuild@0.17.10
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
+      - esbuild
       - markdown-wasm
       - supports-color
     dev: false
 
-  /@contentlayer/core/0.3.0:
+  /@contentlayer/core/0.3.0_esbuild@0.17.10:
     resolution: {integrity: sha512-5cL4W0nK9kNqxgBkIgauUko0SRAHf8oPoxRhdsSPQ7FSCgZGz2crMeSJOFmj3a3govh863/mKhXfkoUJBoDgnA==}
     peerDependencies:
+      esbuild: 0.17.x
       markdown-wasm: 1.x
     peerDependenciesMeta:
       esbuild:
@@ -405,10 +410,10 @@ packages:
       - supports-color
     dev: false
 
-  /@contentlayer/source-files/0.3.0:
+  /@contentlayer/source-files/0.3.0_esbuild@0.17.10:
     resolution: {integrity: sha512-6crNuRdWGYFec0Kn/DpbrzpOu8bttFmOmOpX1HIYQz4iPisg+8biybLBiNU7Y6aCUjEZLOnM7AaHpMFvhrYWsw==}
     dependencies:
-      '@contentlayer/core': 0.3.0
+      '@contentlayer/core': 0.3.0_esbuild@0.17.10
       '@contentlayer/utils': 0.3.0
       chokidar: 3.5.3
       fast-glob: 3.2.12
@@ -421,18 +426,20 @@ packages:
       zod: 3.20.6
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
+      - esbuild
       - markdown-wasm
       - supports-color
     dev: false
 
-  /@contentlayer/source-remote-files/0.3.0:
+  /@contentlayer/source-remote-files/0.3.0_esbuild@0.17.10:
     resolution: {integrity: sha512-4PnaK5cfQiduMUEO6nzqsD4ttD5RG4ffcyeSp5MLhpU0DTEZcfGXFRO777ddEI8PZ0/NJuhfz9MGbdO90QYlsw==}
     dependencies:
-      '@contentlayer/core': 0.3.0
-      '@contentlayer/source-files': 0.3.0
+      '@contentlayer/core': 0.3.0_esbuild@0.17.10
+      '@contentlayer/source-files': 0.3.0_esbuild@0.17.10
       '@contentlayer/utils': 0.3.0
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
+      - esbuild
       - markdown-wasm
       - supports-color
     dev: false
@@ -547,7 +554,6 @@ packages:
     cpu: [arm]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/android-arm64/0.17.10:
@@ -556,7 +562,6 @@ packages:
     cpu: [arm64]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/android-x64/0.17.10:
@@ -565,7 +570,6 @@ packages:
     cpu: [x64]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/darwin-arm64/0.17.10:
@@ -574,7 +578,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/darwin-x64/0.17.10:
@@ -583,7 +586,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/freebsd-arm64/0.17.10:
@@ -592,7 +594,6 @@ packages:
     cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/freebsd-x64/0.17.10:
@@ -601,7 +602,6 @@ packages:
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-arm/0.17.10:
@@ -610,7 +610,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-arm64/0.17.10:
@@ -619,7 +618,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-ia32/0.17.10:
@@ -628,7 +626,6 @@ packages:
     cpu: [ia32]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-loong64/0.17.10:
@@ -637,7 +634,6 @@ packages:
     cpu: [loong64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-mips64el/0.17.10:
@@ -646,7 +642,6 @@ packages:
     cpu: [mips64el]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-ppc64/0.17.10:
@@ -655,7 +650,6 @@ packages:
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-riscv64/0.17.10:
@@ -664,7 +658,6 @@ packages:
     cpu: [riscv64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-s390x/0.17.10:
@@ -673,7 +666,6 @@ packages:
     cpu: [s390x]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/linux-x64/0.17.10:
@@ -682,7 +674,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/netbsd-x64/0.17.10:
@@ -691,7 +682,6 @@ packages:
     cpu: [x64]
     os: [netbsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/openbsd-x64/0.17.10:
@@ -700,7 +690,6 @@ packages:
     cpu: [x64]
     os: [openbsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/sunos-x64/0.17.10:
@@ -709,7 +698,6 @@ packages:
     cpu: [x64]
     os: [sunos]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/win32-arm64/0.17.10:
@@ -718,7 +706,6 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/win32-ia32/0.17.10:
@@ -727,7 +714,6 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@esbuild/win32-x64/0.17.10:
@@ -736,7 +722,6 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /@eslint/eslintrc/1.4.1:
@@ -1828,20 +1813,21 @@ packages:
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
-  /contentlayer/0.3.0:
+  /contentlayer/0.3.0_esbuild@0.17.10:
     resolution: {integrity: sha512-3LEF5HMHjSytlT8SErC3U59Pt2LP80a6Z2f/0mSIPeA4xty0LNChyHqzALySSM0osAEz32RY56Fifk5P+2dCIA==}
     engines: {node: '>=14.18'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@contentlayer/cli': 0.3.0
-      '@contentlayer/client': 0.3.0
-      '@contentlayer/core': 0.3.0
-      '@contentlayer/source-files': 0.3.0
-      '@contentlayer/source-remote-files': 0.3.0
+      '@contentlayer/cli': 0.3.0_esbuild@0.17.10
+      '@contentlayer/client': 0.3.0_esbuild@0.17.10
+      '@contentlayer/core': 0.3.0_esbuild@0.17.10
+      '@contentlayer/source-files': 0.3.0_esbuild@0.17.10
+      '@contentlayer/source-remote-files': 0.3.0_esbuild@0.17.10
       '@contentlayer/utils': 0.3.0
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
+      - esbuild
       - markdown-wasm
       - supports-color
     dev: false
@@ -2094,7 +2080,6 @@ packages:
       '@esbuild/win32-arm64': 0.17.10
       '@esbuild/win32-ia32': 0.17.10
       '@esbuild/win32-x64': 0.17.10
-    dev: false
 
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
@@ -3829,20 +3814,21 @@ packages:
   /natural-compare/1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  /next-contentlayer/0.3.0_3vryta7zmbcsw4rrqf4axjqggm:
+  /next-contentlayer/0.3.0_zay66rtgxsux5atzkswwggtrgu:
     resolution: {integrity: sha512-vt+RaD3nIgZ6oXadtZH19a1mpxvGEoiifdtmXqBSz4rHMRcMA1YZCuSWyj+P9uX7MDmIL6JT6QSp+hvTBMaxiw==}
     peerDependencies:
       next: ^12 || ^13
       react: '*'
       react-dom: '*'
     dependencies:
-      '@contentlayer/core': 0.3.0
+      '@contentlayer/core': 0.3.0_esbuild@0.17.10
       '@contentlayer/utils': 0.3.0
       next: 13.1.6_rlaikcoslzwwtqyk7brpdzej5y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     transitivePeerDependencies:
       - '@effect-ts/otel-node'
+      - esbuild
       - markdown-wasm
       - supports-color
     dev: false
