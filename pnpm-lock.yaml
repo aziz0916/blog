@@ -11,6 +11,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': 5.35.1
   '@typescript-eslint/parser': 5.35.1
   contentlayer: ^0.3.0
+  date-fns: ^2.29.3
   esbuild: ^0.17.10
   eslint: 8.23.0
   eslint-config-eason: 0.0.12
@@ -36,6 +37,7 @@ dependencies:
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   contentlayer: 0.3.0_esbuild@0.17.10
+  date-fns: 2.29.3
   eslint-config-next: 13.1.6_yqf6kl63nyoq5megxukfnom5rm
   next: 13.1.6_rlaikcoslzwwtqyk7brpdzej5y
   next-contentlayer: 0.3.0_zay66rtgxsux5atzkswwggtrgu
@@ -1861,6 +1863,11 @@ packages:
   /data-uri-to-buffer/4.0.1:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
     engines: {node: '>= 12'}
+    dev: false
+
+  /date-fns/2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+    engines: {node: '>=0.11'}
     dev: false
 
   /debug/2.6.9:
